@@ -69,7 +69,7 @@
       "set-by-server": false,
       "value-key": "@ID",
       "optional": true,
-      "id": "ij_threshold",
+      "id": "ij_proeminence",
       "type": "Number",
       "command-line-flag": "--@id"
     }
@@ -78,7 +78,7 @@
   "description": "Segment clustered nuclei using a laplacian filter, detecting maxima and a seeded segmentation",
   "schema-version": "cytomine-0.1",
   "container-image": {
-    "image": "bpavie/W_nuclei-seg-imagej",
+    "image": "bpavie/w_nuclei-seg-imagej",
     "type": "singularity"
   }
 }
