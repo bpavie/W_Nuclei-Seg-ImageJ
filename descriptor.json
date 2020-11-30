@@ -63,9 +63,9 @@
       "command-line-flag": "--@id"
     },
     {
-      "default-value": -0.5,
-      "name": "Threshold",
-      "description": "Segmentation threshold",
+      "default-value": 0.45,
+      "name": "Proeminence",
+      "description": "Minimal proeminence of the minima for the seed detection for the seeded watershed transform",
       "set-by-server": false,
       "value-key": "@ID",
       "optional": true,
@@ -75,7 +75,7 @@
     }
   ],
   "name": "Nuclei-Seg-ImageJ",
-  "description": "Segment clustered nuclei using a laplacian filter, thresholding and a seeded segmentation",
+  "description": "Segment clustered nuclei using a laplacian filter, detecting maxima and a seeded segmentation",
   "schema-version": "cytomine-0.1",
   "container-image": {
     "image": "bpavie/W_nuclei-seg-imagej",

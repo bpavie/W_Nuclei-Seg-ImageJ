@@ -1,7 +1,5 @@
 setBatchMode(true);
 
-LAP_RAD = 5;
-PROEMINENCE = 0.45;
 
 // Path to input image and output image (label mask)
 inputDir = "/dockershare/666/in/";
@@ -9,7 +7,7 @@ outputDir = "/dockershare/666/out/";
 
 // Functional parameters
 LAP_RAD = 5;
-PROEMINENCE = 0.5;
+PROEMINENCE = 0.45;
 
 arg = getArgument();
 parts = split(arg, ",");
