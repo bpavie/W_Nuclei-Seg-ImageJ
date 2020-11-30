@@ -55,6 +55,7 @@ function segmentNuclei(lapRad, proeminence) {
 	run("Convert to Mask");
 	options="input="+inputTitle+" marker=["+maximaTitle+"] mask="+inputTitle+" binary calculate use";
 	run("Marker-controlled Watershed", options);
+	run("8-bit", "" );
 	//run("glasbey on dark");
 	//setThreshold(1.0000, 1000000000000000000000000000000.0000);
 	//run("Convert to Mask");
