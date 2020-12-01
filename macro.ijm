@@ -1,3 +1,17 @@
+//Macro requirement:
+//FeatureJ so the ImageScience plugin : https://imagej.net/ImageScience
+//MorpholibJ : https://imagej.net/MorphoLibJ
+
+//Test the macro:
+/*
+java -Xmx1000m -cp .\jars\ij-1.53c.jar ij.ImageJ --headless --console -macro  "G:\macro.ijm" "input=G:\in, output=G:\out, radius=5, proeminence=0.45"
+
+//Don't forget to modify the :
+- path to your Fiji installation,
+- imageJ version
+- input folder path (and make sure the folder exist and the images are inside the folder)
+- out folder path (and make sure the folder exist)
+*/
 setBatchMode(true);
 
 
@@ -10,10 +24,13 @@ LAP_RAD = 5;
 PROEMINENCE = 0.45;
 
 arg = getArgument();
+//print("arg:"+arg);
 parts = split(arg, ",");
 
 for(i=0; i<parts.length; i++) {
 	nameAndValue = split(parts[i], "=");
+	//print("nameAndValue[0]:"+nameAndValue[0]);
+	//print("nameAndValue[0]:"+nameAndValue[1]);
 	if (indexOf(nameAndValue[0], "input")>-1) inputDir=nameAndValue[1];
 	if (indexOf(nameAndValue[0], "output")>-1) outputDir=nameAndValue[1];
 	if (indexOf(nameAndValue[0], "radius")>-1) LAP_RAD=nameAndValue[1];
