@@ -74,11 +74,12 @@ function segmentNuclei(lapRad, proeminence) {
 	//Run marker controlled watershed
 	run("Marker-controlled Watershed", options);
 	//Convert the 32 bit float label mask to 16 bits
-	run("16-bit", "" );
+	//run("16-bit", "" );
 	//Remap labels so they are continues
-	run("Remap Labels");
+	//run("Remap Labels");
 	//run("glasbey on dark");
-	//setThreshold(1.0000, 1000000000000000000000000000000.0000);
-	//run("Convert to Mask");
+	setThreshold(1.0000, 1000000000000000000000000000000.0000);
+	run("Convert to Mask");
+	run("Analyze Particles...", "size=50-Infinity show=[Count Masks] clear in_situ");
 	close("\\Others");
 }
