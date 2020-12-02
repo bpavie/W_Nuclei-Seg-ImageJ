@@ -28,7 +28,7 @@ ENV PATH $PATH:/fiji
 RUN mkdir -p /fiji/data
 
 # Clean up
-RUN rm fiji-linux64-20170530.zip
+RUN rm fiji-linux64.zip
 
 # ---------------------------------------------------------------------------------------------------------------------
 # Install Neubias-W5-Utilities (annotation exporter, compute metrics, helpers,...)
