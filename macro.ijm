@@ -1,6 +1,7 @@
 //Macro requirement:
 //FeatureJ so the ImageScience plugin : https://imagej.net/ImageScience
 //MorpholibJ : https://imagej.net/MorphoLibJ
+//author: Benjamin Pavie
 
 //Test the macro:
 /*
